@@ -1,0 +1,164 @@
+Day 1 (8 hrs)
+	morning - 9:00 - 13:00
+
+		- go over requirements again
+		- outline
+		
+		- start git project
+		
+		- backend
+			requirements: 
+				- must conform to the standards ()
+				- 4 APIs -> js, python, Golang, Rust
+				- Endpoints
+					GET /people
+						- returns a collection of names from a datastore
+						- example response
+							{
+								result: [{}, {}, {}],
+								count: 3,
+								// other metedata
+							}
+					GET /time
+						- returns the current timestamp
+							- standard if ISO time
+						- ex response
+							{
+								result: {
+									timestamp: ''
+								},
+							}
+					GET /browser
+						- returns the user agent string
+						- ex response
+							{
+								result: {
+									broswer: ''
+								},
+							}
+					GET /counter 
+						- returns an int starting at 0 and increments by 1 each time it's called
+						- ex response
+							{
+								result: {
+									counter: 
+								},
+							}
+					
+		
+			- nodejs
+				- port: 8001
+				- install express
+				- set up server
+					- routes
+						GET /people
+				GET /people
+					- pulls from a json file ('datastore')
+						- if have time later, switch it out to mongodb or something
+					
+					
+			- python
+				- port: 8002
+				- research server framework
+					- next?
+					- flask?
+				- ser up server
+					- routes
+						GET /time
+				
+		- github/git
+			- figure out account stuff
+			- *****squash commits to conform to commit standards
+				format:
+					<type>[optional scope]: <description>
+
+					[optional body]
+
+					[optional footer(s)]
+					
+					https://www.conventionalcommits.org/en/v1.0.0/#summary
+
+	afternoon - 14:00 - 18:00
+	
+		- ui
+			requirements:
+				- must be a singular web component w/ multiple buttons
+				- seach button makes an AJAX request to each backend service and get JSON back
+					- GET People
+					- GET Time
+					- GET broswer (User Agent)
+					- GET counter
+				- http://localhost:8000
+			
+			- search up a slim/tiny frontend framework
+				- Next.js?
+				- Fast.js (is this even a thing?)
+	
+		- deployment
+			
+			- docker
+				
+				requirements:
+					- system should be entirely dockerized
+					- entire system can be executed with a single `docker compose up`
+						- pulls pre-built images from github or docker hub
+					- system must use automate to test, build and reliver artifacts 
+						(something about merging into the trunk)
+					
+					- all images 
+						- should be running as non-root
+						- should be as minimal in size as possible
+						- must not contain any high or critical vulnerablities (link in doc)
+					
+			
+				- research docker
+			
+		- Golang
+			- research Golang
+				- tutorials, etc
+			- port: 8003
+				- research server framework
+				- ser up server
+					- routes
+						GET /browser
+						
+		- README.md
+			requirements:
+				- include instructions for the local build of the system
+				- include instructions to test each of the services
+				- include instructions for running  the project locally
+				- description of each API endpoint and what it returns
+				
+				standards: https://www.makeareadme.com/ 
+			
+	
+Day 2 (8 hrs)
+	morning - 
+	
+		- requirements
+		
+		
+		- Golang API
+			- finish what's left over from previous day
+		
+		- Rust
+			- research Rust
+				- tutorials, etc
+			- port: 8003
+				- research server framework
+				- ser up server
+					- routes
+						GET /counter
+		
+		
+		- docker
+			- docker compose set up
+		
+		- unit tests
+		
+		
+	afternoon - 
+	
+		- docker
+		- documentation
+		- unit tests
