@@ -8,7 +8,7 @@ Day 1 (8 hrs)
 		
 		- backend
 			requirements: 
-				- must conform to the standards ()
+				- must conform to the standards (https://dodcio.github.io/eads/)
 				- 4 APIs -> js, python, Golang, Rust
 				- Endpoints
 					GET /people
@@ -78,7 +78,7 @@ Day 1 (8 hrs)
 					
 					https://www.conventionalcommits.org/en/v1.0.0/#summary
 
-	afternoon - 14:00 - 18:00
+	afternoon - 16:00 - 20:00
 	
 		- ui
 			requirements:
