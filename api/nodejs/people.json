@@ -1,17 +1,25 @@
 [
   {
+    "id": 1,
+    "href": "/people/1",
     "name": "John",
     "age": "30"
   },
   {
+    "id": 2,
+    "href": "/people/2",
     "name": "Jim",
     "age": "31"
   },
   {
+    "id": 3,
+    "href": "/people/3",
     "name": "James",
     "age": "20"
   },
   {
+    "id": 4,
+    "href": "/people/4",
     "name": "Jimbo",
     "age": "50"
   }

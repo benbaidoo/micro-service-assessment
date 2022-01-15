@@ -1,8 +1,9 @@
 const peopleData = require('./people.json')
 
+// returns a collection of names from a datastore
 const getPeople = (req, res) => {
   return res.json({
-    results: peopleData,
+    data: peopleData,
     count: Object.keys(peopleData).length
   })
 }
