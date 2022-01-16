@@ -50,5 +50,17 @@ services:
     # volumes:
     #   - ./api/rust/:/home/node/app
 
+  react-client:
+    build:
+      context: ./ui/assessment-ui/
+      dockerfile: Dockerfile
+    image: react-client
+    container_name: react-client
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./ui/assessment-ui/:/home/node/app
+
 # volumes:
   # node_modules:
