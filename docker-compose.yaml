@@ -1,0 +1,54 @@
+version: "3"
+
+services:
+  nodejs-webserver:
+    build:
+      context: ./api/nodejs/
+      dockerfile: Dockerfile
+    image: nodejs-webserver
+    container_name: nodejs-webserver
+    restart: always
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./api/nodejs/:/home/node/app
+      # - node_modules:/home/node/app/node_modules
+  
+  python-webserver:
+    build:
+      context: ./api/python/
+      dockerfile: Dockerfile
+    image: python-webserver
+    container_name: python-webserver
+    restart: always
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./api/python/:/home/pyuser/code
+
+  # golang-webserver:
+  #   build:
+  #     context: ./api/golang/
+  #     dockerfile: Dockerfile
+  #   image: golang-webserver
+  #   container_name: golang-webserver
+  #   restart: always
+  #   ports:
+  #     - "8003:8003"
+  #   volumes:
+  #     - ./api/golang/:/home/node/app
+
+  # rust-webserver:
+    # build:
+    #   context: ./api/rust/
+    #   dockerfile: Dockerfile
+    # image: nodejs
+    # container_name: rust
+    # restart: always
+    # ports:
+    #   - "8004:8004"
+    # volumes:
+    #   - ./api/rust/:/home/node/app
+
+# volumes:
+  # node_modules:
