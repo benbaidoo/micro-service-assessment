@@ -1,0 +1,15 @@
+.backend-api {
+  background-color: lightslategray;
+  color: beige;
+  padding: 10px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+.backend-api button {
+  text-align: center;
+  background-color: lightblue;
+  padding: 5px;
+}
