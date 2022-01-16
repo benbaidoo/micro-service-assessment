@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from datetime import datetime
 
@@ -6,6 +7,17 @@ PORT = 8002
 HOST = 'localhost'
 
 app = FastAPI()
+
+origins = [
+    "http://localhost",
+    "http://localhost:8000"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_headers=["*"]
+)
 
 @app.get("/")
 async def root():
