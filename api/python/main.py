@@ -4,7 +4,8 @@ import uvicorn
 from datetime import datetime
 
 PORT = 8002
-HOST = 'localhost'
+# HOST = 'localhost'
+HOST = '0.0.0.0'
 
 app = FastAPI()
 
