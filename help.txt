@@ -11,3 +11,8 @@ python
 https://wiki.python.org/moin/WebFrameworks
 https://fastapi.tiangolo.com/tutorial/first-steps/
 https://realpython.com/fastapi-python-web-apis/
+
+golang
+https://go.dev/doc/code
+https://go.dev/tour/welcome/1
+https://gin-gonic.com/docs/

@@ -133,13 +133,17 @@ Day 1 (8 hrs)
 			
 	
 Day 2 (8 hrs)
-	morning - 
+	morning - 10:00 - 14:00
 	
 		- requirements
 		
-		
 		- Golang API
 			- finish what's left over from previous day
+				(finished yesterday)
+				
+		- Finish ui
+			react
+				- button set up button to call different apis
 		
 		- Rust
 			- research Rust
@@ -152,12 +156,35 @@ Day 2 (8 hrs)
 		
 		
 		- docker
+			requirements:
+					- system should be entirely dockerized
+					- entire system can be executed with a single `docker compose up`
+						- pulls pre-built images from github or docker hub
+					- system must use automate to test, build and reliver artifacts 
+						(something about merging into the trunk)
+					
+					- all images 
+						- should be running as non-root
+						- should be as minimal in size as possible
+						- must not contain any high or critical vulnerablities (link in doc)
+					
+			
+				- research docker
 			- docker compose set up
+			
+		- README.md
+			requirements:
+				- include instructions for the local build of the system
+				- include instructions to test each of the services
+				- include instructions for running  the project locally
+				- description of each API endpoint and what it returns
+				
+				standards: https://www.makeareadme.com/ 
 		
 		- unit tests
 		
 		
-	afternoon - 
+	afternoon - 15:00 - 19:00
 	
 		- docker
 		- documentation
