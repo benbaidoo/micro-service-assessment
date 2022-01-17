@@ -184,7 +184,7 @@ Day 2 (8 hrs)
 		- unit tests
 		
 		
-	afternoon - 15:00 - 19:00
+	afternoon - 16:00 - 20:00
 	
 		- docker
 		- documentation

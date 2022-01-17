@@ -1,12 +1,46 @@
 # Microservice Assessment
 
-## build
+# build
 
-## run
+# run
 
 ### docker
+run `docker compose up` in the root directory to start up system
+```
+docker compose up
+docker compose up -d
+```
 
 ### local
+To locally run:
+
+> node app
+```
+cd api/nodejs
+npm start
+```
+> go
+```
+cd api/golang
+go run main.go
+
+```
+> python
+```
+cd api/python
+python main.py
+```
+> rust
+```
+cd api/rust
+cargo run
+```
+> ui
+```
+cd api/nodejs
+npm start
+```
+
 
 ## test
 
@@ -15,18 +49,17 @@
 #### `GET /people` returns a collection of names from a datastore
 - example response
 ```{
-  result: [{}, {}, {}],
-  count: 3,
-	// other metedata
+  data: [{}, {}, {}],
+  count: 3
 }
 ```
 
 #### `GET /time` returns the current timestamp
-  - standard is ISO time
+  - standard is UTC time in the ISO format
   - ex response
 ```
 {
-  result: {
+  data: {
   	timestamp: ''
 	},
 }
@@ -35,7 +68,7 @@
 - ex response
 ```
 {
-  result: {
+  data: {
 	  broswer: ''
 	},
 }
@@ -45,8 +78,8 @@
 - ex response
 ```
 {
-  result: {
-	  counter: 
+  data: {
+	  count: 1
 	},
 }
 ```

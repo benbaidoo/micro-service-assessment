@@ -74,3 +74,7 @@ __pycache__/
 go.work
 
 !api/golang/*.go
+
+#rust
+api/rust/target
+
