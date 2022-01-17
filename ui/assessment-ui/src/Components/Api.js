@@ -16,7 +16,7 @@ const Api = ({
   const onClick = async () => {
     const data = await runApi(formatUrl())
     console.log(data)
-    setResponse(data)
+    setResponse(JSON.stringify(data))
   }
 
   return (

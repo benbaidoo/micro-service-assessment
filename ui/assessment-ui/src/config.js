@@ -10,7 +10,7 @@ export default {
     {
       // id:'2',
       framework: 'python',
-      endpoint: '/time',
+      endpoint: '/counter',
       url: 'localhost',
       port: '8002',
     },
@@ -24,7 +24,7 @@ export default {
     {
       // id:'4',
       framework: 'rust',
-      endpoint: '/counter',
+      endpoint: '/time',
       url: 'localhost',
       port: '8004',
     },
