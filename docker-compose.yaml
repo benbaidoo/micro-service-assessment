@@ -26,29 +26,29 @@ services:
     volumes:
       - ./api/python/:/home/pyuser/code
 
-  # golang-webserver:
-  #   build:
-  #     context: ./api/golang/
-  #     dockerfile: Dockerfile
-  #   image: golang-webserver
-  #   container_name: golang-webserver
-  #   restart: always
-  #   ports:
-  #     - "8003:8003"
-  #   volumes:
-  #     - ./api/golang/:/home/node/app
+  golang-webserver:
+    build:
+      context: ./api/golang/
+      dockerfile: Dockerfile
+    image: golang-webserver
+    container_name: golang-webserver
+    restart: always
+    ports:
+      - "8003:8003"
+    volumes:
+      - ./api/golang/:/go/src/app
 
-  # rust-webserver:
-    # build:
-    #   context: ./api/rust/
-    #   dockerfile: Dockerfile
-    # image: nodejs
-    # container_name: rust
-    # restart: always
-    # ports:
-    #   - "8004:8004"
-    # volumes:
-    #   - ./api/rust/:/home/node/app
+  rust-webserver:
+    build:
+      context: ./api/rust/
+      dockerfile: Dockerfile
+    image: rust-webserver
+    container_name: rust-webserver
+    restart: always
+    ports:
+      - "8004:8004"
+    volumes:
+      - ./api/rust/:/home/rustuser/app
 
   react-client:
     build:
