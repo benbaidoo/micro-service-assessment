@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
-from datetime import datetime
+# from datetime import datetime
 
 PORT = 8002
 # HOST = 'localhost'
@@ -20,16 +20,19 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+class Counter():
+    count = 0
+
+counter = Counter()
 @app.get("/")
 async def root():
     return {"message":"Hello World"}
 
 # returns the current timestamp
-@app.get("/time")
-def time():
-    now = datetime.utcnow().isoformat()
-    # { data: { timestamp: ''}}
-    return { "data": { "timestamp": now}}
+@app.get("/counter")
+def get_count():
+    counter.count +=1
+    return { "data": { "count": counter.count}}
 
 if __name__ == '__main__':
     uvicorn.run(app, port=PORT, host=HOST)
